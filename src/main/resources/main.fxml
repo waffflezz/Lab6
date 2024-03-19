@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GeneratePrimesController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="452.4" minWidth="10.0" prefWidth="371.1999877929687" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.3999999999999" minWidth="10.0" prefWidth="368.8000122070313" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="238.1999954223633" minHeight="10.0" prefHeight="170.99998779296874" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="254.9999965667725" minHeight="10.0" prefHeight="167.40003662109376" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="161.4" minHeight="0.0" prefHeight="47.39996337890625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="65.60002441406249" minHeight="0.0" prefHeight="39.99998779296874" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="200.0" text="Диапазон простых чисел" textAlignment="CENTER" />
+                                    <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#generatePrimes" prefHeight="26.0" prefWidth="105.0" text="Сгенерировать" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Min:">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="minPrime" maxWidth="-Infinity" prefWidth="80.0" />
+                                    <Separator orientation="VERTICAL" prefHeight="200.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="16.0" />
+                                       </HBox.margin>
+                                    </Separator>
+                                    <Label text="Max:">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="maxPrime" maxWidth="-Infinity" prefWidth="80.0" />
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="PQList" editable="true" minWidth="-Infinity" prefHeight="150.0" prefWidth="200.0" />
+                              <Separator prefWidth="200.0">
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Separator>
+                           </children>
+                        </VBox>
+                        <TextArea fx:id="outputField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                           <children>
+                              <TextArea fx:id="inputField" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="encButton" mnemonicParsing="false" onAction="#encode" text="Зашифровать">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="decButton" mnemonicParsing="false" onAction="#decode" text="Дешифровать">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Рандом" />
+                                    <Button fx:id="calculate" mnemonicParsing="false" onAction="#calculateRSA" text="Посчитать">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Label text="P:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Calibri" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="3.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="PField" maxWidth="1.7976931348623157E308" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Label text="Q:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Calibri" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="QField" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Label text="E:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Calibri" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="4.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="EField" editable="false" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Label text="N:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Calibri" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="1.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="NField" editable="false" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <Label text="D:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="1.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="DField" editable="false" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
